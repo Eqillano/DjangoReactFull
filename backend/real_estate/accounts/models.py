@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractBaseUser,PermissionsMixin,BaseUse
 
 
 
-class UserAccountManager(BaseException):
+class UserAccountManager(BaseUserManager):
     def create_user(self,email,name,password=None):
         if not email:
             raise ValueError('Users must have an email')
